@@ -27,6 +27,7 @@ footer[id] {
   scroll-margin-top: 112px;
 }
 
+/* PREMIUM HOVER */
 .premium-lift {
   transition: transform 0.28s ease, box-shadow 0.28s ease, background-color 0.28s ease, border-color 0.28s ease, color 0.28s ease, filter 0.28s ease;
   transform-origin: center;
@@ -41,6 +42,7 @@ footer[id] {
   filter: brightness(1.03);
 }
 
+/* LOGO SLIDER */
 .logo-marquee {
   overflow: hidden;
   width: 100%;
@@ -73,4 +75,42 @@ footer[id] {
   100% {
     transform: translateX(-50%);
   }
+}
+
+/* ========================= */
+/* 🔥 PREMIUM FADE ANIMATION */
+/* ========================= */
+
+/* page load */
+.premium-page-enter {
+  animation: premiumPageFade 0.8s ease;
+}
+
+@keyframes premiumPageFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* scroll animation */
+[data-fade-section='true'] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+[data-fade-section='true'].fade-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* standard mode (no animation) */
+[data-fade-section='false'] {
+  opacity: 1;
+  transform: none;
+  transition: none;
 }
