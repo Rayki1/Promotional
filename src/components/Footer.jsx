@@ -53,7 +53,7 @@ export default function Footer({ mode }) {
         </div>
 
         <div className="flex flex-col items-center gap-4 pt-8 text-center text-[12px] text-[#8e93a0] md:flex-row md:justify-between md:text-left">
-          <div>© 2024 Editorial Enterprise. Built for Architects.</div>
+          <div>© 2026 Editorial Enterprise. Built for Architects.</div>
           <div className="flex items-center justify-center gap-5">
             <a href="#hero">Twitter</a>
             <a href="#features">LinkedIn</a>
